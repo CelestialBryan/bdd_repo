@@ -1,0 +1,61 @@
+INSERT INTO cliente(nome_cli)
+VALUES   
+('Roberto Souza'),
+('Maria Clara'),
+('Augusto Lima');
+
+select * from cliente;
+
+INSERT INTO pedido(pedido_obitido,status,desconto,id_cliente,id_funcionario)
+VALUES   
+('10:20','Pronto',0.00,1,2),
+('10:56','Preparando', 5.00,2,3),
+('11:04','Preparando', 7.20,3,2);
+
+select * from pedido;
+
+INSERT INTO funcionario(nome_func,cargo,salario,entrada,saida)
+VALUES   
+('João santos','Cozinheiro',1800.00,'8:00','17:00'),
+('Olivia Perez', 'Atendente', 1350.00,'8:00','17:00'),
+('Livia Braga', 'Atendente', 1350.00,'8:00','17:00'),
+('Ronaldo Marley','Garçom', 1200.00,'9:00','18:00');
+
+select * from funcionario;
+
+INSERT INTO item_cardapio(nome_item,preco,categoria,disponibilidade)
+VALUES   
+('Misto Quente',12.00,'Pão','Sim'),
+('Suco de Uva', 8.00, 'Bebida','Sim'),
+('Mini-burger',21.00 ,'Lanche' ,'Sim'),
+('Pastel de Creme',14.00 ,'Doce','Não');
+
+select * from item_cardapio;
+
+INSERT INTO estoque_ingrediente(produto,quantidade,unidade)
+VALUES   
+('Presunto', 200, 0.150),
+('Queijo', 400, 0.200 ),
+('Carne moida',350, 0.200),
+('Uva',450, 0.100);
+
+select * from estoque_ingrediente;
+
+INSERT INTO cardapio_pedido(itens_totais,id_pedido,id_item)
+VALUES   
+(2,450, 0.100,1,1),
+(2,450, 0.100,2,1),
+(2,450, 0.100,2,2),
+(1,450, 0.100,3,3);
+
+select * from cardapio_pedido;
+
+INSERT INTO ingrediente_item(quantidade_usada,id_item,id_ingrediente)
+VALUES   
+(1,450, 0.100,1,1),
+(1,450, 0.100,1,2),
+(4,450, 0.100,2,4),
+(1,450, 0.100,3,3),
+(2,450, 0.100,3,2); 
+
+select * from ingrediente_item;
